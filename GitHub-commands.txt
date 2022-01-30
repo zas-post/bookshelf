@@ -8,6 +8,22 @@
 #-------------------------------------------------
 
 
+# System, applies to entire machine and all users
+git config --system --list
+git config --system --edit
+
+# User defined
+git config --global --list
+git config --global --edit
+
+
+git config --list
+git config --list --show-origin
+
+git config -l 
+
+
+
 Первоначальная настройка
 Настройка информации о пользователе для всех локальных репозиториев
 
@@ -92,6 +108,10 @@ git stash drop              #Сбрасывает последние време�
 
 git log                                     #История коммитов для текущей ветки
 
+git log -1                                  #Покажет первый коммит 
+
+git log -l -p                               #Покажет что было сделано в коммит  (в первом коммите)
+
 git log --follow [file]                     #История изменений конкретного файла, включая его переименование
 
 git diff [first branch]...[second branch]   #Показывает разницу между содержанием коммитов двух веток
@@ -117,72 +137,3 @@ git merge [remote repository]/[branch]  #Вносит изменения из в
 git push [remote repository] [branch]   #Загружает все изменения локальной ветки в удалённый репозиторий
 
 git pull                                #Загружает историю из удалённого репозитория и объединяет её с локальной. pull = fetch + merge
-
-
-
-
-
-
-
-
-
-
-
-
-# System, applies to entire machine and all users
-git config --system --list
-git config --system --edit
-
-# User defined
-git config --global --list
-git config --global --edit
-
-git config --list
-
-git config --list --show-origin
-
-> git config --global user.name ""    - добавление пользователя
-
-> git config --global user.email ""   - добавление email
-
-> git config -l                       - просмотр конфига
-
-# Работа с Local Repository
-
-1. создаём локальную папку на компе
-mkdir myproject
-
-cd myproject
-
-git init .
-
-можно создать сразу 
-git init myproject
-
-git status
-
-echo "www" > file-1.txt  создание файла
-
-git add . или (*)
-
-git commit -m "Добавление коментария, ver 1.0"
-
-
-git log
-git log -1  колличество коммитов (посследний коммит)
-git log -l -p  покажет что было сделано в коммит
-
-git checkout -- file1.txt   - вернуть файл на начало, до стейжинга
-
-git diff --stage   - какие изменения закоммитятся
-
-.gitignore
- *.logs
- logs/
- file.txt
-
- git clone http/ssh
-echo "Hello World" > file.txt
-git add .
-git commit -m "Added HelloVorld file"
-git push origin
