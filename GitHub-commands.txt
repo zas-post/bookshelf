@@ -2,7 +2,26 @@
 #
 # Introduction to Github by Alexander Z
 #
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Version        Date             Info
+#  1.0         30-Jan-2022    Initial Version
+#
+#-------------------------------------------------
+
+
+* Initial setting
+
+/ Setting user information for all local repositories
+
+ git config --global user.name "[name]"     #Sets the name that will be the author of the commits you execute
+
+ git config --global user.email "[email]"   #Sets the email address that will be displayed in the information about the commits you make
+
+
+
+
+
+
+
 
 
 # System, applies to entire machine and all users
