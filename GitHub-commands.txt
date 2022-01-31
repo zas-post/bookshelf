@@ -16,7 +16,6 @@ git config --system --edit
 git config --global --list
 git config --global --edit
 
-
 git config --list
 git config --list --show-origin
 
